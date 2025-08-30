@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - TechQuizBee</title>
+  <link rel="stylesheet" href="style1.css">
+  <!-- Added Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-brain"></i> TechQuizBee
+      </div>
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index1.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about1.html" class="nav-link active">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <main class="main-content">
+   <div class="quiz-container show">
+      <div class="quiz-header">
+        <h1 class="quiz-title">About TechQuizBee</h1>
+      </div>
+      <div class="quiz-body">
+        <p>
+          Welcome to <strong>TechQuizBee</strong>, the platform designed for learners and developers 
+          who want to sharpen their technical skills.  
+        </p>
+        <p>
+          We provide quizzes on <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>Python</b>, and <b>SQL</b>.  
+          Whether you are a student preparing for exams or just practicing for fun, 
+          our quizzes will help you improve step by step.
+        </p>
+        <p>
+          🚀 <i>Learn. Practice. Master. With TechQuizBee.</i>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>TechQuizBee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      const icon = hamburger.querySelector('i');
+      if (navMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  </script>
+</body>
+</html>

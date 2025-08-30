@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Quiz - TechQuizBee</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="quiz1.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i> TechQuizBee
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index1.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz1.html" class="nav-link">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1 class="quiz-title" id="quiz-title">CSS Quiz</h1>
+                <div class="quiz-info">
+                    <div class="info-box">Category: <span id="category-name">CSS</span></div>
+                    <div class="info-box">Level: <span id="level-name">Beginner</span></div>
+                    <div class="info-box">Score: <span id="score">0</span></div>
+                </div>
+            </div>
+            
+            <div id="quiz-content">
+                <!-- Quiz content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>TechQuizBee. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set quiz type for the quiz engine
+        localStorage.setItem("quizType", "css");
+        
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            const icon = hamburger.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>

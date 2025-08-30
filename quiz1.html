@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - TechQuizBee</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i> TechQuizBee
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="quiz.html" class="nav-link active">Quiz</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Leaderboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1 class="quiz-title">Select a Quiz Category</h1>
+            </div>
+            
+            <div class="category-cards">
+                <div class="category-card html-card">
+                    <div class="category-content">
+                        <h3>HTML</h3>
+                        <p>Test your knowledge of HTML tags, attributes, semantic markup, and modern HTML5 features.</p>
+                        <a href="html-quiz.html" class="category-btn">Start HTML Quiz</a>
+                    </div>
+                </div>
+                <div class="category-card css-card">
+                    <div class="category-content">
+                        <h3>CSS</h3>
+                        <p>Challenge yourself with CSS properties, layouts, flexbox, grid, animations, and responsive design.</p>
+                        <a href="css-quiz.html" class="category-btn">Start CSS Quiz</a>
+                    </div>
+                </div>
+                <div class="category-card js-card">
+                    <div class="category-content">
+                        <h3>JavaScript</h3>
+                        <p>Evaluate your JS skills with questions on ES6, DOM manipulation, async programming, and more.</p>
+                        <a href="js-quiz.html" class="category-btn">Start JS Quiz</a>
+                    </div>
+                </div>
+                <div class="category-card python-card">
+                    <div class="category-content">
+                        <h3>Python</h3>
+                        <p>Test your Python knowledge including data structures, OOP, libraries, and Pythonic concepts.</p>
+                        <a href="python-quiz.html" class="category-btn">Start Python Quiz</a>
+                    </div>
+                </div>
+                <div class="category-card sql-card">
+                    <div class="category-content">
+                        <h3>SQL</h3>
+                        <p>Check your database skills with queries, joins, subqueries, normalization, and optimization.</p>
+                        <a href="sql-quiz.html" class="category-btn">Start SQL Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>TechQuizBee. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            const icon = hamburger.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.querySelector('i').classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
