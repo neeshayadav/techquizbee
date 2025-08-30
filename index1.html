@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechQuizBee - Test Your Coding Knowledge</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i> TechQuizBee
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index1.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about1.html" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Test Your Tech Knowledge</h1>
+            <p>Challenge yourself with quizzes on HTML, CSS, JavaScript, Python, and SQL. Perfect for developers of all levels!</p>
+            <a href="#categories" class="cta-button">Start Quiz Now</a>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose TechQuizBee?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Learn by Doing</h3>
+                    <p>Our interactive quizzes help reinforce your programming knowledge through practical application.</p>
+                </div>
+                <div class="card">
+                    <h3>Track Progress</h3>
+                    <p>Monitor your improvement over time with detailed results and personalized feedback.</p>
+                </div>
+                <div class="card">
+                    <h3>Multiple Categories</h3>
+                    <p>Explore quizzes in HTML, CSS, JavaScript, Python, SQL.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories">
+            <h2>Quiz Categories</h2>
+            <div class="category-cards">
+                <div class="category-card html-card">
+                    <div class="category-content">
+                        <h3>HTML</h3>
+                        <p>Test your knowledge of HTML tags, attributes, semantic markup, and modern HTML5 features.</p>
+                        <button class="category-btn" data-category="html">Start HTML Quiz</button>
+                    </div>
+                </div>
+                <div class="category-card css-card">
+                    <div class="category-content">
+                        <h3>CSS</h3>
+                        <p>Challenge yourself with CSS properties, layouts, flexbox, grid, animations, and responsive design.</p>
+                        <button class="category-btn" data-category="css">Start CSS Quiz</button>
+                    </div>
+                </div>
+                <div class="category-card js-card">
+                    <div class="category-content">
+                        <h3>JavaScript</h3>
+                        <p>Evaluate your JS skills with questions on ES6, DOM manipulation, async programming, and more.</p>
+                        <button class="category-btn" data-category="js">Start JS Quiz</button>
+                    </div>
+                </div>
+                <div class="category-card python-card">
+                    <div class="category-content">
+                        <h3>Python</h3>
+                        <p>Test your Python knowledge including data structures, OOP, libraries, and Pythonic concepts.</p>
+                        <button class="category-btn" data-category="python">Start Python Quiz</button>
+                    </div>
+                </div>
+                <div class="category-card sql-card">
+                    <div class="category-content">
+                        <h3>SQL</h3>
+                        <p>Check your database skills with queries, joins, subqueries, normalization, and optimization.</p>
+                        <button class="category-btn" data-category="sql">Start SQL Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Container (initially hidden) -->
+        <div id="quiz-container" class="quiz-container">
+            <div class="quiz-header">
+                <h1 class="quiz-title" id="quiz-title">Quiz</h1>
+                <div class="quiz-info">
+                    <div class="info-box">Category: <span id="category-name">-</span></div>
+                    <div class="info-box">Level: <span id="level-name">Beginner</span></div>
+                    <div class="info-box">Score: <span id="score">0</span></div>
+                </div>
+            </div>
+   <div id="level-selection" style="display: none;">
+    <h2>Select Difficulty Level</h2>
+    <button class="level-btn" data-level="beginner">Beginner</button>
+    <button class="level-btn" data-level="intermediate">Intermediate</button>
+    <button class="level-btn" data-level="advanced">Advanced</button>
+</div>         
+            <div id="quiz-content">
+                <!-- Quiz content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>TechQuizBee. All rights reserved.</p>
+        <p>Test your programming knowledge and improve your skills!</p>
+    </footer>
+
+    <script src="quiz1.js"></script>
+</body>
+</html>
